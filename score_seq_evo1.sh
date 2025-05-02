@@ -24,14 +24,14 @@
 #SBATCH --cpus-per-gpu=1
 #
 # Specify (hard) runtime (HH:MM:SS)
-#SBATCH --time=00:30:00
+#SBATCH --time=00:15:00
 #
 # Job name
-#SBATCH --job-name=score-Dmel-gene
+#SBATCH --job-name=score-ribB-gene
 #
 # Output file
-#SBATCH --output=/home/tuo90294/slurm/out/score-Dmel-gene-%j.out
-#SBATCH --error=/home/tuo90294/slurm/err/score-Dmel-gene-%j.err
+#SBATCH --output=/home/tuo90294/slurm/out/score-ribB-gene-%j.out
+#SBATCH --error=/home/tuo90294/slurm/err/score-ribB-gene-%j.err
 #======================================================
 
 # Load CUDA always
@@ -47,8 +47,8 @@ cd /home/tuo90294/evo
 # runs on GPU 0
 srun --gpus 1 \
     python3 -m scripts.score \
-    --input-fasta /home/tuo90294/FBgn0037797_NT_033777.3_Dmel_allSynonymousMutants.fasta \
-    --output-tsv /home/tuo90294/FBgn0037797_NT_033777.3_Dmel_allSynonymousMutants_scores.tsv \
-    --model-name 'evo-1-131k-base' \
+    --input-fasta /home/tuo90294/ribB_Ecoli_allSynonymousMutants.fasta \
+    --output-tsv /home/tuo90294/ribB_Ecoli_allSynonymousMutants_scores.tsv \
+    --model-name 'evo-1.5-8k-base' \
     --device cuda:0
 
