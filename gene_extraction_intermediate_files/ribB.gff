@@ -1,0 +1,2 @@
+U00096.3	Genbank	gene	3183813	3184466	.	-	.	ID=gene-b3041;Dbxref=ASAP:ABE-0009980,ECOCYC:EG10465;Name=ribB;gbkey=Gene;gene=ribB;gene_biotype=protein_coding;gene_synonym=ECK3032,htrP,luxH,luxH-l;locus_tag=b3041
+U00096.3	Genbank	CDS	3183813	3184466	.	-	0	ID=cds-AAC76077.1;Parent=gene-b3041;Dbxref=UniProtKB/Swiss-Prot:P0A7J0,NCBI_GP:AAC76077.1,ASAP:ABE-0009980,ECOCYC:EG10465;Name=AAC76077.1;gbkey=CDS;gene=ribB;locus_tag=b3041;product=3%2C4-dihydroxy-2-butanone-4-phosphate synthase;protein_id=AAC76077.1;transl_table=11
