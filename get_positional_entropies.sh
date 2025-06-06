@@ -27,11 +27,11 @@
 #SBATCH --time=00:15:00
 #
 # Job name
-#SBATCH --job-name=score-flanked-trpL-gene
+#SBATCH --job-name=getPositionalEntropies
 #
 # Output file
-#SBATCH --output=/home/tuo90294/slurm/out/score-flanked-trpL-gene-%j.out
-#SBATCH --error=/home/tuo90294/slurm/err/score-flanked-trpL-gene-%j.err
+#SBATCH --output=/home/tuo90294/slurm/out/posEntropies-flanked-conserved-seqs-%j.out
+#SBATCH --error=/home/tuo90294/slurm/err/posEntropies-flanked-conserved-seqs-%j.err
 #======================================================
 
 # Load CUDA always
@@ -46,9 +46,9 @@ cd /home/tuo90294/evo
 
 # runs on GPU 0
 srun --gpus 1 \
-    python3 -m scripts.score \
-    --input-fasta /home/tuo90294/20250523_trpL_flanked_allSynonymousMutants.fasta \
-    --output-tsv /home/tuo90294/20250523_trpL_flanked_allSynonymousMutants_scores.tsv \
+    python3 -m scripts.get_positional_entropies \
+    --input-fasta /home/tuo90294/20250606_conserved_seqs_flanked.fasta \
+    --output-tsv /home/tuo90294/20250606_conserved_seqs_flanked_positionalEntropies.tsv \
     --model-name 'evo-1.5-8k-base' \
     --device cuda:0
 

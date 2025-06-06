@@ -52,8 +52,8 @@ if len(coding_seq) % 3 != 0:
 # === EXTRACT CODONS ===
 codons = [coding_seq[i:i+3] for i in range(0, len(coding_seq), 3)]
 
-# Check for in-frame stop codons
-for idx, codon in enumerate(codons):
+# Check for in-frame stop codons, ignoring the final stop codon
+for idx, codon in enumerate(codons[:-1]):
     if codon in codon_table.stop_codons:
         raise ValueError(f"In-frame stop codon ({codon}) found at site {idx + 1}. Sequence processing aborted.")
 
