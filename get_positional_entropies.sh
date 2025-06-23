@@ -47,8 +47,8 @@ cd /home/tuo90294/evo
 # runs on GPU 0
 srun --gpus 1 \
     python3 -m scripts.get_positional_entropies \
-    --input-fasta /home/tuo90294/20250606_conserved_seqs_flanked.fasta \
-    --output-tsv /home/tuo90294/20250606_conserved_seqs_flanked_positionalEntropies.tsv \
+    --input-fasta /home/tuo90294/genes/20250606_conserved_seqs_flanked.fasta \
+    --output-tsv /home/tuo90294/20250606_conserved_seqs_flanked_positionalEntropies_evo-1.5-8k-base.tsv \
     --model-name 'evo-1.5-8k-base' \
     --device cuda:0
 
